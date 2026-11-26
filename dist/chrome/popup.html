@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Link Guard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <h2>Smart Link Guard</h2>
+
+        <div class="status">
+            <span id="statusIndicator" class="active"></span>
+            <span id="statusText">Protection enabled</span>
+        </div>
+
+        <label class="setting">
+            <input type="checkbox" id="enabled" checked>
+            Enable protection
+        </label>
+
+        <label class="setting timeout-setting">
+            Connection timeout (seconds)
+            <input
+                type="number"
+                id="timeout"
+                min="1"
+                max="30"
+                value="3"
+            >
+        </label>
+
+        <button id="saveSettings">Save settings</button>
+
+        <p id="message" role="status"></p>
+
+    </main>
+
+    <script src="popup.js"></script>
+
+</body>
+</html>
